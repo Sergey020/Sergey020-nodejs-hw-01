@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "get-all": "node src/scripts/getAllContacts",
+    "generate": "node src/scripts/generateContacts.js",
+    "add-one": "node src/scripts/addOneContact.js",
+    "count": "node src/scripts/countContacts.js",
+    "remove-last": "node src/scripts/removeLastContact.js",
+    "remove-all": "node src/scripts/removeAllContacts.js"
   },
   "keywords": [],
   "author": "Sergey020 <sergeytkachenko020@gmail.com>",
@@ -13,8 +17,6 @@
   "devDependencies": {
     "@eslint/js": "^9.7.0",
     "eslint": "^9.7.0",
-    "globals": "^15.8.0",
-    "nodemon": "^3.1.4",
-    "typescript-eslint": "^7.16.1"
+    "globals": "^15.8.0"
   }
 }
