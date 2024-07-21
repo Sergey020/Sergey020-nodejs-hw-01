@@ -1,5 +1,13 @@
 import { PATH_DB } from '../constants/contacts.js';
-
-export const getAllContacts = async () => {};
+import fs from 'node:fs/promises';
+export const getAllContacts = async () => {
+    try{
+        const data = await fs.readFile(PATH_DB, 'utf-8');
+        const parsedData = JSON.parse(data);
+            return parsedData;
+      } catch (error) {
+        console.error('Error generating contacts:', error);
+    }
+};
 
 console.log(await getAllContacts());
